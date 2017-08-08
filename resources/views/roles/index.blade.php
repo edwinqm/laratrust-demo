@@ -28,7 +28,7 @@
         $('#role-permissions-table').DataTable({
             serverSide: true,
             processing: true,
-            ajax: '/roles/data',
+            ajax: '/admin/roles/data',
             columns: [
                 {data: 'id'},
                 {data: 'name'},

@@ -20,11 +20,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/403', 'HomeController@notFound');
 
-Route::get('users', 'UsersController@index')->middleware('role:superadministrator');
-Route::get('users/data', 'UsersController@data')->middleware('role:superadministrator');
-
-Route::group(['middleware' => ['role:superadministrator']], function () {
+Route::group(['middleware' => 'role:administrator'], function () {
     Route::resource('posts', 'PostsController');
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => ['role:superadministrator']], function () {
+    Route::get('users', 'UsersController@index');
+    Route::get('users/data', 'UsersController@data');
 
     Route::get('roles', 'RolesController@index');
     Route::get('roles/data', 'RolesController@data');

@@ -49,9 +49,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('users') }}">Users</a></li>
-                    <li><a href="{{ url('roles') }}">Roles</a></li>
-                    <li><a href="{{ url('permissions') }}">Permissions</a></li>
+                    <li><a href="{{ url('admin/users') }}">Users</a></li>
+                    <li><a href="{{ url('admin/roles') }}">Roles</a></li>
+                    <li><a href="{{ url('admin/permissions') }}">Permissions</a></li>
                     <li><a href="{{ url('posts') }}">Posts</a></li>
                 </ul>
 
